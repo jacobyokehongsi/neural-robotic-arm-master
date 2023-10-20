@@ -1,8 +1,8 @@
 model_params:
   name: "CategoricalVAE"
   categorical_dim: 4
-  action_dim: 4
-  context_dim: 4
+  action_dim: 14
+  context_dim: 3
   hidden_dims: [50,50]
   temperature: 0.5
   anneal_rate: 0.00003
@@ -10,7 +10,7 @@ model_params:
   alpha: 1.0
 
 data_params:
-  data_path: "/home3/jacobyhsi/neural-robotic-arm-master/src/data/cyclic_traj_with_grasping_noise_PNP"
+  data_path: "/Users/jsi/Documents/neural-robotic-arm-master/src/data/libfranka_joints/processed/A_B"
   train_batch_size: 256
   val_batch_size: 256
   test_batch_size: 256

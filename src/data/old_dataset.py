@@ -13,7 +13,7 @@ class Step:
     ee_velocity: np.array
     context: Dict
     gripper_velocity: np.array = None
-    human_action: np.array = np.array([])
+    human_action: np.array = field(default_factory=lambda: np.array([]))
 
 
 @dataclass

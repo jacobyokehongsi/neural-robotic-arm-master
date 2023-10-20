@@ -3,7 +3,7 @@ import yaml
 import argparse
 import numpy as np
 from pathlib import Path
-from experiment import VAEXperiment
+from experiment_joints import VAEXperiment
 import torch.backends.cudnn as cudnn
 from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import WandbLogger
@@ -20,7 +20,7 @@ parser.add_argument('--config',  '-c',
                     dest="filename",
                     metavar='FILE',
                     help='path to the config file',
-                    default='/home3/jacobyhsi/neural-robotic-arm-master/src/configs/cat_vae.yml')
+                    default='./configs/cat_vae.yml')
 
 args = parser.parse_args()
 with open(args.filename, 'r') as file:
